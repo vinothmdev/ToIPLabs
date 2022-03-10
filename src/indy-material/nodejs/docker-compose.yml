@@ -15,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: pool.dockerfile
-    command: 'bash -c ''./scripts/start_webserver.sh'''
+    command: "bash -c './scripts/start_webserver.sh'"
     environment:
       - IP=173.17.0.101
       - IPS=173.17.0.101,173.17.0.102,173.17.0.103,173.17.0.104
@@ -44,7 +44,7 @@ services:
   #
   node1:
     image: indy-node
-    command: 'bash -c ''./scripts/start_node.sh 1'''
+    command: "bash -c './scripts/start_node.sh 1'"
     networks:
       services:
         ipv4_address: 173.17.0.101
@@ -61,7 +61,7 @@ services:
 
   node2:
     image: indy-node
-    command: 'bash -c ''./scripts/start_node.sh 2'''
+    command: "bash -c './scripts/start_node.sh 2'"
     networks:
       services:
         ipv4_address: 173.17.0.102
@@ -78,7 +78,7 @@ services:
 
   node3:
     image: indy-node
-    command: 'bash -c ''./scripts/start_node.sh 3'''
+    command: "bash -c './scripts/start_node.sh 3'"
     networks:
       services:
         ipv4_address: 173.17.0.103
@@ -95,7 +95,7 @@ services:
 
   node4:
     image: indy-node
-    command: 'bash -c ''./scripts/start_node.sh 4'''
+    command: "bash -c './scripts/start_node.sh 4'"
     networks:
       services:
         ipv4_address: 173.17.0.104
