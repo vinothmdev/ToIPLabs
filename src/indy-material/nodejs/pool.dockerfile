@@ -1,6 +1,6 @@
-FROM bcgovimages/von-image:py35-1.6-8
+FROM bcgovimages/von-image:py36-1.6-8
 
-USER indy
+USER root
 
 RUN pip install --no-cache-dir aiosqlite~=0.6.0
 
