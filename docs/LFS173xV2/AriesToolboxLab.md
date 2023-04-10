@@ -19,8 +19,6 @@ In this lab, we'll show you how to start up the Aries Toolbox and connect it wit
 Since Aries Toolbox is an [Electron](https://www.electronjs.org/) app, you must run at least part of this lab on your own system. The second element of this lab, the actual agents for Alice and Bob, can run on your local machine with Docker or
 on Play-with-Docker as we've seen before.
 
-Note: As of writing this, the Aries Toolbox does not run on Apple M1 Silicon device, such as the recent MacBook Airs. Follow the status of that issue [here](https://github.com/hyperledger/aries-toolbox/issues/218).
-
 ### Installing node and npm
 
 The need to run Aries Toolbox locally will add a new dependency to our list. To run this lab you need to have [nodejs](https://nodejs.org/) and [npm](https://www.npmjs.com/) (node package manager) installed. If you don’t have those installed on your system already, here is some guidance on installing them on different systems:
@@ -58,12 +56,12 @@ the Toolbox previously, you might see other connections. If so, you can delete t
 
 ### Running ACA-Py Agents
 
-In your second terminal, get a local clone of the Aries ACA-Py Plugins Toolbox repo and use docker-compose to start up Alice and Bob:
+In your second terminal, get a local clone of the Aries ACA-Py Plugins Toolbox repo and use `docker compose` to start up Alice and Bob:
 
 ```bash
 git clone https://github.com/hyperledger/aries-acapy-plugin-toolbox
 cd aries-acapy-plugin-toolbox/demo
-docker-compose -f docker-compose.alice-bob.yml up --build
+docker compose -f docker-compose.alice-bob.yml up --build
 
 ```
 
@@ -89,10 +87,10 @@ There are not currently a lot of instructions on what you can do with the Aries 
 - Use the “Invitations” menu item in the Alice window to create and copy an invitation, and paste it into the appropriate field in the “Connections” menu item of Bob’s window. That should enable a connection between Alice and Bob.
 - Find the DIDs that Alice and Bob are using for connections to each other and “Activate” those connections from the “Connections” menu item.
 - Play around with the Credentials section. For example, have Alice create a schema and a credential definition and issue a credential to Bob. Further, have Alice request a proof request from Bob about that credential.
-  - The Aries Toolbox uses the Sovrin Staging network by default. To issue credentials, the issuer must:
-    - Accept the Sovrin Staging Transaction Author Agreement
+  - The Aries Toolbox uses the Sovrin BuilderNet network by default. To issue credentials, the issuer must:
+    - Accept the Sovrin BuilderNet Transaction Author Agreement
     - Use the [Sovrin Self-Service](https://selfserve.sovrin.org/) to write an Endorser DID to the ledger.
-- Create an invitation, display its QR code and scan it with one of the mobile wallet apps (one of those listed [here](https://vonx.io/getwallet)).
+- Create an invitation, display its QR code and scan it with one of the mobile wallet apps (one of those listed [here](../../GetWallet.md)).
 
 We’ll keep monitoring the Aries Toolbox sites and if tutorials about the Aries Toolbox are posted, we’ll link to them from here.
 
@@ -106,7 +104,7 @@ To stop the ACA-Py agents, go to the second terminal and:
 - To cleanup the docker sessions run:
 
   ``` bash
-  docker-compose -f docker-compose.alice-bob.yml down
+  docker compose -f docker-compose.alice-bob.yml down
 
   ```
 

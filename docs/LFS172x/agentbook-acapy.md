@@ -15,7 +15,7 @@ to the other. The [Aries RFCs repo](https://github.com/hyperledger/aries-rfcs/) 
 a list of connection protocols that have been proposed, implemented and, in some cases,
 accepted by the Aries Working Group.
 
-For this demo we'll use [Play with Docker](https://labs.play-with-docker.com) a tool from Docker, Inc. that allows you to access a Linux command line and run docker scripts in your browser. We'll also use AgentBook, a test service for Aries agents run by the Government of British Columbia's [VON Team](https://vonx.io).
+For this demo we'll use [Play with Docker](https://labs.play-with-docker.com) a tool from Docker, Inc. that allows you to access a Linux command line and run docker scripts in your browser. We'll also use AgentBook, a test service for Aries agents run by the Government of British Columbia's [Digital Identity and Trust Services (formerly VON) Team](https://digital.gov.bc.ca/digital-trust).
 
 ## Demo Steps
 
@@ -27,6 +27,7 @@ For this demo we'll use [Play with Docker](https://labs.play-with-docker.com) a 
 git clone https://github.com/hyperledger/aries-cloudagent-python
 cd aries-cloudagent-python/demo/
 git checkout tags/0.5.6 -b b0.5.6
+sed -i 's/.*web.py/web.py~=0.62/' requirements.txt
 LEDGER_URL=http://dev.bcovrin.vonx.io ./run_demo alice
 ```
 

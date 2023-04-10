@@ -29,7 +29,6 @@ This page contains general instructions for running labs for the edX LFS173x cou
     - [Basic Usage](#basic-usage)
     - [Ports](#ports)
     - [Editing Files](#editing-files)
-    - [Play with VON](#play-with-von)
   - [Running on Docker Locally](#running-on-docker-locally)
     - [Prerequisites](#prerequisites-1)
     - [Basic Usage](#basic-usage-1)
@@ -53,10 +52,12 @@ In many of the labs we will let you know that you have the option of running the
 
 [Play with Docker](https://labs.play-with-docker.com/) is a tool from [Docker, Inc.](https://docker.com/) that allows you to access a Linux command line on which you can run docker scripts in your browser. The environment is temporary (lasting up to 4 hours) and should not be used for development, but it is a great playground for playing with open source software examples without having to add anything to your own system.
 
+If you choose this option, everything runs in your browser, and you don't need to do any software downloads and installs on your own system.
+
 
 #### Prerequisites
 
-To use Play with Docker, you must have a modern browser and a free account on [Docker Hub](https://hub.docker.com/).
+To use Play with Docker, you must have a modern browser and a free account on [Docker Hub](https://hub.docker.com/). If you don't have a Docker Hub account, please create one now.
 
 
 #### Basic Usage
@@ -68,7 +69,7 @@ To get to a command line for running a lab, do the following:
 *   Go to [https://labs.play-with-docker.com](https://labs.play-with-docker.com/) (called Play with Docker)
 *   Click `Start` and the `+ Add New Instance` to start a terminal window
 
-Once running a terminal window, follow the specific examples for the lab. The Linux instance you are using has everything you need to run the labs preinstalled, such as `git`, `docker `and `docker-compose`, plus an editor if you want to update files as you experiment.
+Once running a terminal window, follow the specific examples for the lab. The Linux instance you are using has everything you need to run the labs preinstalled, such as `git` and `docker`, plus an editor if you want to update files as you experiment.
 
 If instructed to open an additional terminal, hit the `+ Add New Instance` again.
 
@@ -85,12 +86,6 @@ If you need to edit files when using Play with Docker, you can use `vi` from the
 
 Remember that all your files are deleted when your Play with Docker session closes, so if you do want to preserve your files, make sure you grab them before you exit.
 
-
-#### Play with VON
-
-From time to time, we've found that Play with Docker is not available. The BC Gov team operates a smaller instance of Play with Docker called Play with VON that you might try in those circumstances. Play with VON can be accessed [here](http://play-with-von.vonx.io/).
-
-
 ### Running on Docker Locally
 
 To run the examples locally, open up a `bash` terminal session on your local machine. On Mac and Linux, the default `terminal` apps use bash (or a bash-compatible shell). On Windows, we recommend using `git-bash` that is installed with git on Windows. The labs will not work using Windows `cmd` or `powershell` command lines.
@@ -105,7 +100,6 @@ When you run the labs locally, you need the following prerequisites installed on
 *   A terminal command line interface running `bash` shell.
 *   Docker, including Docker Compose—Community Edition is fine.
     *   If you do not already have Docker installed, open [this link](https://docs.docker.com/install/#supported-platforms) and then click the link for the installation instructions for your platform.
-    *   Instructions for installing docker-compose for a variety of platforms can be found [here](https://docs.docker.com/compose/install/).
 *   Git
     *   [This link](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/) provides installation instructions for Mac, Linux (including if you are running Linux using VirtualBox) and native Windows (without VirtualBox).
 

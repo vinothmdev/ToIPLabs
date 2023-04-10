@@ -23,12 +23,12 @@ This lab demonstrates invoking HTTP ACA-Py Admin endpoints used by controllers (
 sequence was pretty much the same as the last lab you did, but with a different set of protocols. The lab showed:
 
 - Controllers initiating several protocols:
-  - Faber creating an invitation to share with Alice ([RFC 0434 Out-of-Band](https://github.com/hyperledger/aries-rfcs/tree/master/features/0434-outofband))
-  - Alice requesting a connection based on the invitation ([RFC 0023 DID Exchange](https://github.com/hyperledger/aries-rfcs/tree/master/features/0023-did-exchange))
-  - Faber initiating an issue credential V2 protocol ([RFC 0453](https://github.com/hyperledger/aries-rfcs/tree/master/features/0453-issue-credential-v2))
-  - Faber issuing a JSON-LD BBS+ verifiable credential ([RFC 0646](https://github.com/hyperledger/aries-rfcs/tree/master/features/0646-bbs-credentials))
-  - Faber initiating a present proof V2 protocol ([RFC 0454](https://github.com/hyperledger/aries-rfcs/tree/master/features/0454-present-proof-v2))
-  - Faber using the DIF Presentation Exchange data format to request the presentation ([RFC 0510](https://github.com/hyperledger/aries-rfcs/tree/master/features/0510-dif-pres-exch-attach))
+  - Faber creating an invitation to share with Alice ([RFC 0434 Out-of-Band](https://github.com/hyperledger/aries-rfcs/tree/main/features/0434-outofband))
+  - Alice requesting a connection based on the invitation ([RFC 0023 DID Exchange](https://github.com/hyperledger/aries-rfcs/tree/main/features/0023-did-exchange))
+  - Faber initiating an issue credential V2 protocol ([RFC 0453](https://github.com/hyperledger/aries-rfcs/tree/main/features/0453-issue-credential-v2))
+  - Faber issuing a JSON-LD BBS+ verifiable credential ([RFC 0646](https://github.com/hyperledger/aries-rfcs/tree/main/features/0646-bbs-credentials))
+  - Faber initiating a present proof V2 protocol ([RFC 0454](https://github.com/hyperledger/aries-rfcs/tree/main/features/0454-present-proof-v2))
+  - Faber using the DIF Presentation Exchange data format to request the presentation ([RFC 0510](https://github.com/hyperledger/aries-rfcs/tree/main/features/0510-dif-pres-exch-attach))
 - Events from ACA-Py being received by controllers via a webhooks as the protocol moves forward.
 - The controller pulling data from the events to process and respond to those events.
 
